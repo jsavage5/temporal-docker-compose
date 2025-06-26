@@ -49,8 +49,8 @@ services:
     image: temporalio/auto-setup:${TEMPORAL_VERSION}
     networks:
       - temporal-network
-    ports:
-      - 7233:7233
+    expose:
+      - 7233
     # volumes:
     #   - ./dynamicconfig:/etc/temporal/config/dynamicconfig
   temporal-admin-tools:
